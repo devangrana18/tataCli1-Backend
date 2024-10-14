@@ -30,7 +30,7 @@ app.get('/api/products/search', async (req, res) => {
   const searchQuery = req.query.q;
 
   try {
-    const products = await Product.find({
+    const products = await products.find({
       name: { $regex: searchQuery, $options: 'i' },
     });
 
