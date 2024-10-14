@@ -19,7 +19,9 @@ mongoose
   .connect(process.env.MONGO_URI)
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.log(err));
-
+app.use("/",()=>{
+  res.send("connected")
+})
 app.use("/api/products", productsRoute);
 app.use("/api/auth",userRouts)
 app.use("/categories", category)
