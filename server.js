@@ -4,10 +4,10 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config();
-const productsRoute = require("../backend/routes/product.routes");
-const userRouts = require("../backend/routes/auth.routes")
-const category = require("../backend/routes/categories.routes")
-const BagsRoutes = require("../backend/routes/bag.routes")
+const productsRoute = require("./routes/product.routes");
+const userRouts = require("./routes/auth.routes")
+const category = require("./routes/categories.routes")
+const BagsRoutes = require("./routes/bag.routes")
 
 const app = express();
 const PORT = process.env.PORT || 5000;
