@@ -19,7 +19,7 @@ mongoose
   .connect(process.env.MONGO_URI)
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.log(err));
-app.use("/",()=>{
+app.get("/",(req,res)=>{
   res.send("connected")
 })
 app.use("/api/products", productsRoute);
